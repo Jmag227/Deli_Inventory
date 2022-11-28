@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CurrentProduct>
+
+    <h2>Products</h2>
+    <table class="table">
+        <tr>
+            <th>ItemName</th>
+            <th>ExpireDate</th>
+            <th>WhoPutOut</th>
+        </tr>
+
+        @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ItemName</td>
+                    <td>@product.ExpireDate</td>
+                    <td>@product.WhoPutOut</td>
+                </tr>
+
+            }
+    </table>
