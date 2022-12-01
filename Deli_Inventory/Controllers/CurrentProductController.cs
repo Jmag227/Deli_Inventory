@@ -10,7 +10,7 @@ namespace Deli_Inventory.Controllers
     {
         private readonly ICurrentProduct repo;
 
-        public CurrentProductController(CurrentProductRepository repo)
+        public CurrentProductController(ICurrentProduct repo)
         {
             this.repo = repo;
         }

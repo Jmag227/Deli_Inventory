@@ -19,7 +19,7 @@ namespace Deli_Inventory
 
         IEnumerable<CurrentProduct> ICurrentProduct.GetAllProducts()
         {
-            return _conn.Query<CurrentProduct>("SELECT * FROM CURRENTPRODUCTS;");
+            return _conn.Query<CurrentProduct>("SELECT * FROM CURRENT_PRODUCT;");
 
         }
     }
