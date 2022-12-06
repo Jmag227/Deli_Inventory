@@ -7,6 +7,7 @@ namespace Deli_Inventory.Models
 {
     public class CurrentProduct
     {
+        public int Id { get; set; }
         public string ItemName { get; set; }
         public DateTime ExpireDate  { get; set; }
         public string WhoPutOut { get; set; }

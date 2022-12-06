@@ -9,5 +9,7 @@ namespace Deli_Inventory
     public interface ICurrentProduct
     {
         public IEnumerable<CurrentProduct> GetAllProducts();
+        public CurrentProduct GetProduct(int id);
+        public void UpdateCurrentProduct(CurrentProduct currentProject);
     }
 }

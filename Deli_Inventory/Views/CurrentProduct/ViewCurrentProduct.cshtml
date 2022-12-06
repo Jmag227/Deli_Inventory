@@ -1,0 +1,23 @@
+﻿@model CurrentProduct
+
+<h3>@Model.ItemName Information</h3>
+
+<table class="table">
+    <tr>
+        <th>ItemName</th>
+        <th>ExpireDate</th>
+        <th>WhoPutOut</th>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.ItemName</td>
+        <td>@Model.ExpireDate</td>
+        <td>@Model.WhoPutOut</td>
+    </tr>
+
+</table>
+
+<div style="display: block">
+    <a href="/Product/UpdateProduct/@Model.Id">Update this Product</a>
+</div>
+

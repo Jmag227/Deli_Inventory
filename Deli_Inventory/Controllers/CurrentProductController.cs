@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Deli_Inventory.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,35 @@ namespace Deli_Inventory.Controllers
             var products = repo.GetAllProducts();
             return View(products);
         }
+        public IActionResult ViewCurrentProduct(int id)
+        {
+            var product = repo.GetProduct(id);
+
+            return View(product);
+        }
+
+        public IActionResult UpdateCurrentProduct(int id)
+        {
+            CurrentProduct prod = repo.GetProduct(id);
+
+            if (prod == null)
+            {
+                return View("ProductNotFound");
+            }
+
+            return View(prod);
+        }
+
+        public IActionResult UpdateCuProductToDatabase(CurrentProduct product)
+        {
+            repo.UpdateCurrentProduct(product);
+
+            return RedirectToAction("ViewCurrentProduct", new { id = product.Id });
+        }
+
+
+
+
+
     }
 }

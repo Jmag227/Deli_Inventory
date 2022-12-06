@@ -3,6 +3,7 @@
     <h2>Products</h2>
     <table class="table">
         <tr>
+            <th>Id</th>
             <th>ItemName</th>
             <th>ExpireDate</th>
             <th>WhoPutOut</th>
@@ -11,6 +12,7 @@
         @foreach (var product in Model)
             {
                 <tr>
+                    <td><a href=/CurrentProduct/ViewCurrentProduct/@product.Id>@product.Id</a></td>
                     <td>@product.ItemName</td>
                     <td>@product.ExpireDate</td>
                     <td>@product.WhoPutOut</td>

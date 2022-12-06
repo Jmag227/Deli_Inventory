@@ -1,0 +1,19 @@
+﻿@model CurrentProduct
+
+<h2>Update @Model.ItemName</h2>
+
+@using (Html.BeginForm("UpdateProductToDatabase", "Product", "Post"))
+{
+    <input asp-for="ItemName" type="hidden" value="@Model.ItemName" />
+
+    <label asp-for="ItemName" class="control-label">ItemName</label>
+
+    <input type="text" name="ExpireDate" class="form-control" value="@Model.ExpireDate" />
+
+    <label asp-for="WhoPutOut" class="control-label">WhoPutOut</label>
+
+    <input type="number" step="0.01" name="WhoPutOut" class="form-control" value="@Model.WhoPutOut" />
+
+    <input type="submit" value="Update Product" class="btn btn-primary" />
+
+}
